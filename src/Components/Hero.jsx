@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="relative max-w-480 w-full min-h-246.5 overflow-hidden  ">
       <div
-        className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(public/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
+        className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
       bg-center  absolute scale-x-[-1] w-screen inset-0"
       ></div>
       <div className=" text-white md:flex-col flex relative  items-center px-5">
@@ -52,21 +52,21 @@ const Hero = () => {
               <Location
                 title="Location"
                 info="Search by city"
-                icon="public/location.png"
+                icon="assets/location.png"
               />
             </div>
             <div>
               <Location
                 title="Date"
                 info="20/01/2026"
-                icon="public/date.png"
+                icon="assets/date.png"
               />
             </div>
             <div>
               <Location
                 title="Capicity"
                 info="Search by city"
-                icon="public/members.png"
+                icon="assets/members.png"
               />
             </div>
             <Button
