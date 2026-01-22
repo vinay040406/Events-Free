@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="relative max-w-480 w-full min-h-246.5 overflow-hidden  ">
       <div
-        className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
+        className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(/assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
       bg-center  absolute scale-x-[-1] w-screen inset-0"
       ></div>
       <div className=" text-white md:flex-col flex relative  items-center px-5">
