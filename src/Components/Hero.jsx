@@ -11,8 +11,7 @@ const Hero = () => {
       <div className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(src/assets/10878ab9e650c4ad78302034fdebefa96e166933.jpg)] bg-no-repeat bg-cover 
       bg-center  absolute scale-x-[-1] w-full  inset-0"></div>
       <div className=" text-white md:flex-col flex relative  items-center px-5">
-        <Navbar position="fixed" />
-
+        <Navbar />
         <div className="hero mt-40 md:mt-62.5 max-w-330 w-full flex flex-col md:items-start items-center">
           <div className="heading  text-[45px] text-center  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]">
             <h1>Sed tortor in quisque morbi </h1>
@@ -48,7 +47,7 @@ const Hero = () => {
             />
             <a className="font-normal text-[20px] ">Learn more</a>
           </div>
-          <footer className="md:flex grid gap-8  grid-flow-row grid-cols-1  max-w-240.5 w-full  lg:justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] md:px-5 md:py-5 p-[20px_40px] items-center md:mt-35 sm:mt-30 mt-25 " >
+          <footer className="md:flex grid gap-8  grid-flow-row grid-cols-1   md:max-w-240.5 md:w-full   lg:justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] md:px-5 md:py-5 p-[40px_80px] mb-5 items-center md:mt-35 sm:mt-30 mt-25 " >
             <div>
               <Location
                 title="Location"
@@ -72,11 +71,10 @@ const Hero = () => {
             </div>
             <Button
               text="GO CHECK"
-              p="md:p-[12px_40px] p-[3px_8px]"
+              p="md:p-[12px_40px] p-4"
               bgColor="bg-white"
               textColor="text-[#2C49FE]"
               rounded="rounded-[150px]"
-              textSize="text-[20px]"
               font="font-bold"
             />
           </footer>

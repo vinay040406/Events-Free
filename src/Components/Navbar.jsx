@@ -5,13 +5,32 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import { icon } from "@fortawesome/fontawesome-svg-core";
 import { useState } from "react";
+import { gsap } from "gsap";
 
-const Navbar = ({ position }) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [login, setLogout] = useState("Log In");
+
+  const [userLogin, setUserLogin] = useState(true);
+  let tl = gsap.timeline();
+
+  function handleLogout() {
+    if (userLogin) {
+      setTimeout(() => {
+        setLogout("Log Out", false);
+        setUserLogin(false);
+      }, 1000);
+    } else if (!userLogin) {
+      setTimeout(() => {
+        setLogout("Log In", true);
+        setUserLogin(true);
+      }, 1000);
+    }
+  }
 
   return (
     <nav
-      className={` ${position} max-w-330 w-full flex justify-between mt-2 sm:mt-4  min-h-16.5 top-0 `}
+      className={`fixed max-w-330 w-full flex justify-between mt-2 sm:mt-4  min-h-16.5 top-0 `}
     >
       <div className={`md:hidden fixed right-5 top-8 sm:top-14`}>
         <FontAwesomeIcon
@@ -46,14 +65,15 @@ const Navbar = ({ position }) => {
         <a className="font-normal hover:font-bold duration-200  " href="">
           USER NAME
         </a>
+
         <Button
-          text="Log Out"
+          text={login}
           textColor="text-white"
           bgColor="bg-[rgba(44,73,254,1)]"
           p="p-[10px_30px]"
           rounded="rounded-[23px]"
           font="font-[600]"
-          textSize="text-[16px]"
+          onClick={handleLogout}
         />
       </ul>
     </nav>
