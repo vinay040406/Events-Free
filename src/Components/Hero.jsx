@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Button from "./Button";
 import Location from "./Location";
+import Line from "./Line";
 
 const Hero = () => {
   return (
@@ -15,18 +16,7 @@ const Hero = () => {
         <div className="hero mt-40 md:mt-62.5 max-w-330 w-full flex flex-col md:items-start items-center">
           <div className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]">
             <h1>Sed tortor in quisque morbi </h1>
-            <div className="flex sm:justify-end justify-center max-w-196  w-ful">
-              <svg
-                className="lg:w-102.5 md:w-90  sm:w-70 w-50 "
-                height="8"
-                viewBox="0 0 472 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="2.49805" width="469.503" height="8" fill="#01C8FF" />
-                <rect width="414.561" height="8" fill="#2C49FE" />
-              </svg>
-            </div>
+            <Line  display={" sm:justify-end justify-center"} width={"lg:w-102.5 md:w-90  sm:w-70 w-50 "}/>
             <h1>scelerisque etiam eu.</h1>
           </div>
           <p className="max-w-191.25 w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex ">
@@ -56,11 +46,7 @@ const Hero = () => {
               />
             </div>
             <div>
-              <Location
-                title="Date"
-                info="20/01/2026"
-                icon="assets/date.png"
-              />
+              <Location title="Date" info="20/01/2026" icon="assets/date.png" />
             </div>
             <div>
               <Location

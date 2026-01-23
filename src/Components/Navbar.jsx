@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed max-w-330 w-full flex justify-between mt-2 sm:mt-4  min-h-16.5 top-0 `}
+      className={`fixed max-w-330 z-100 w-full flex justify-between mt-2 sm:mt-4  min-h-16.5 top-0 `}
     >
       <div className={`md:hidden fixed right-5 top-8 sm:top-14`}>
         <FontAwesomeIcon
