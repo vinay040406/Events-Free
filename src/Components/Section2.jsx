@@ -55,7 +55,7 @@ function Section2() {
                 <Section2Box
                   image={<Help />}
                   margin={"mt-8"}
-                  title={"Sharing"}
+                  title={"Help"}
                   info={
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur urna in "
                   }
