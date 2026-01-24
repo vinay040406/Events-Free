@@ -16,7 +16,10 @@ const Hero = () => {
         <div className="hero mt-40 md:mt-62.5 max-w-330 w-full flex flex-col md:items-start items-center">
           <div className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]">
             <h1>Sed tortor in quisque morbi </h1>
-            <Line  display={" sm:justify-end justify-center"} width={"lg:w-102.5 md:w-90  sm:w-70 w-50 "}/>
+            <Line
+              display={" sm:justify-end justify-center"}
+              width={"lg:w-102.5 md:w-90  sm:w-70 w-50 "}
+            />
             <h1>scelerisque etiam eu.</h1>
           </div>
           <p className="max-w-191.25 w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex ">
@@ -35,9 +38,11 @@ const Hero = () => {
               font="font-[600]"
               rounded="rounded-[28px]"
             />
-            <a className="font-normal text-[20px] ">Learn more</a>
+            <a className="font-normal text-[20px] whitespace-nowrap ">
+              Learn more
+            </a>
           </div>
-          <footer className="md:flex grid gap-8  grid-flow-row grid-cols-1   md:max-w-240.5 md:w-full   lg:justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] md:px-5 md:py-5 p-[40px_80px] mb-5 items-center md:mt-35 sm:mt-30 mt-25 ">
+          <footer className="md:flex grid lg:gap-8  md:gap-6 gap-8 grid-flow-row grid-cols-1  md:max-w-240.5 md:w-full justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] sm:p-[40px_80px] md:px-8 md:py-5 px-10 py-5 mb-5 items-center md:mt-35 sm:mt-30 mt-25 ">
             <div>
               <Location
                 title="Location"
@@ -57,7 +62,7 @@ const Hero = () => {
             </div>
             <Button
               text="GO CHECK"
-              p="md:p-[12px_40px] p-4"
+              p="lg:p-[12px_40px] p-4"
               bgColor="bg-white"
               textColor="text-[#2C49FE]"
               rounded="rounded-[150px]"

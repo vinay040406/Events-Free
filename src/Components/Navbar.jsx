@@ -30,9 +30,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed max-w-330 z-100 w-full flex justify-between mt-2 sm:mt-4  min-h-16.5 top-0 `}
+      className={`fixed max-w-330 z-100 w-full flex justify-between mt-0 md:mt-4 -ml-4  min-h-16.5 top-0 bg-black/30 backdrop-blur-sm rounded-lg`}
     >
-      <div className={`md:hidden fixed right-5 top-8 sm:top-14`}>
+      <div className={`md:hidden fixed sm:right-5 right-2 top-5 sm:top-8`}>
         <FontAwesomeIcon
           onClick={() => setOpen(!open)}
           icon={faBars}
@@ -43,15 +43,15 @@ const Navbar = () => {
         <img
           src="assets/logo.png"
           alt=""
-          className="sm:h-auto w-24.5 h-20 cursor-pointer"
+          className="sm:h-auto lg:w-24.5 lg:h-20 h-15 w-20 cursor-pointer"
         />
-        <div className="sm:text-[36px] text-[30px] font-bold flex items-center leading-0  lg:ml-1.25 cursor-pointer">
+        <div className="sm:text-[36px] text-[27px] font-bold flex items-center leading-0  lg:ml-1.25 cursor-pointer">
           <p className="text-[rgba(44,73,254,1)]">Events</p>
           <span className="text-[rgba(1,200,255,1)]">Free</span>
         </div>
       </div>
       <ul
-        className={`md:flex hidden gap-10  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] `}
+        className={`md:flex hidden gap-10  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-10 `}
       >
         <a className="font-normal hover:font-bold  duration-200 " href="">
           HOME

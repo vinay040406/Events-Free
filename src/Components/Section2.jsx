@@ -15,10 +15,10 @@ function Section2() {
               height="100%"
               src="https://www.youtube.com/embed/BRW2qLi9YDM?si=2K6thfytiATK3-4v"
               title="YouTube video player"
-              frameborder="0"
+              // frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              // referrerpolicy="strict-origin-when-cross-origin"
+              // allowfullscreen
             ></iframe>
           </div>
           <div className="flex flex-col align-start max-w-158.25 w-full xl:justify-start xl:items-start  items-center justify-center xl:text-start text-center">
