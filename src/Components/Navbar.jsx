@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
       </div>
       <ul
-        className={`md:flex hidden gap-10  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-10 `}
+        className={`md:flex hidden gap-10  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 `}
       >
         <a className="font-normal hover:font-bold  duration-200 " href="">
           HOME

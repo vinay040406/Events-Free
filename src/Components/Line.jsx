@@ -4,7 +4,7 @@ const Line = ({ display, width }) => {
   return (
     <div className={`flex max-w-196 ${display}  w-full`}>
       <svg
-        className={`${width} h-[8px]`}
+        className={`${width} h-2`}
         viewBox="0 0 472 8"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
