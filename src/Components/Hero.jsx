@@ -1,20 +1,73 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navbar from "./Navbar";
 import Button from "./Button";
 import Location from "./Location";
 import Line from "./Line";
+import { gsap } from "gsap";
 
 const Hero = () => {
+  let tl = gsap.timeline();
+
+  const bgRef = useRef(null);
+  const headingRef = useRef(null);
+  useEffect(() => {
+    tl.fromTo(
+      bgRef.current,
+      {
+        x: 1200,
+        y: -1000,
+        z: 1400,
+        opacity: 0,
+        rotate: 0,
+      },
+      {
+        x: 0,
+        rotate: 540,
+        yoyo: true,
+        y: 0,
+        z: 0,
+        opacity: 1,
+        duration: 1.5,
+      },
+    );
+    tl.from("h1", {
+      x: 1200,
+      y: -1000,
+      z: 1400,
+      rotate: 360,
+      opacity: 0,
+      stagger: 1,
+      yoyo: true,
+      duration: 0.2,
+      delay: -1,
+    });
+    tl.from("p", {
+      x: 1200,
+      y: -1000,
+      z: 1400,
+      rotate: 360,
+      opacity: 0,
+      stagger: 1,
+      yoyo: true,
+      duration: 0.2,
+      delay: -4,
+    });
+  }, []);
+
   return (
     <div className="relative max-w-480 w-full min-h-246.5 overflow-hidden  ">
       <div
-        className="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(/assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
+        ref={bgRef}
+        className=" bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(/assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
       bg-center  absolute scale-x-[-1] w-screen inset-0"
       ></div>
       <div className=" text-white md:flex-col flex relative  items-center px-5">
         <Navbar />
         <div className="hero mt-40 md:mt-62.5 max-w-330 w-full flex flex-col md:items-start items-center">
-          <div className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]">
+          <div
+            ref={headingRef}
+            className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]"
+          >
             <h1>Sed tortor in quisque morbi </h1>
             <Line
               display={" sm:justify-end justify-center"}

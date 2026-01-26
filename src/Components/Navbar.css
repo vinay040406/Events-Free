@@ -3,15 +3,17 @@
   top: 10vh;
   right: 0;
   height: 90vh;
-  width: 40vw;
+  width: 50vw;
   display: flex;
   gap: 30px;
   flex-direction: column;
-  background-color:black;
+  background-image: url("https://images.pexels.com/photos/16458431/pexels-photo-16458431.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   justify-content: center;
-  transition: all 0.9s ease;
-  font-size: 25px;
+  font-size: 27px;
+  font-weight: bolder;
 }

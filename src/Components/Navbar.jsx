@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core";
@@ -20,25 +20,20 @@ const Navbar = () => {
         : setLogout("Log In", setUserLogin(true));
     }, 1000);
   }
- 
 
   return (
     <nav
-      className={`fixed max-w-330 z-100 w-full flex justify-between mt-0 md:mt-4 -ml-4  min-h-16.5 top-0 bg-black/30 backdrop-blur-sm rounded-lg`}
+      className={`fixed max-w-330 z-100 w-full flex justify-between mt-0 md:mt-4 -ml-4  min-h-16.5 top-0 bg-black/30 backdrop-blur-sm rounded-lg duration-500 ease-in`}
     >
       <div className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3 `}>
         <button
-          className={`text-[35px] font-bolder duration-900 ease-in-out z-auto`}
+          className={`text-[35px] font-bolder duration-900 ease-in-out`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
         </button>
-        {/* <FontAwesomeIcon
-          icon={faBars}
-          className="cursor-pointer text-3xl font-bold"
-        /> */}
       </div>
-      <div className="flex items-center ">
+      <div className="flex items-center">
         <img
           src="assets/logo.png"
           alt=""
@@ -50,8 +45,9 @@ const Navbar = () => {
         </div>
       </div>
       <ul
-        className={`
-          ${isOpen ? "block showMenu translate-0 " : "md:flex hidden gap-10 md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 "}
+        className={` menu
+
+          ${isOpen ? "block showMenu" : "md:flex hidden gap-10 md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 "}
           
          `}
       >
