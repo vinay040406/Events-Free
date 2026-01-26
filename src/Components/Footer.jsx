@@ -4,8 +4,8 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="max-w-480  w-full p-20 bg-black text-white flex justify-center items-center">
-      <div className="flex max-w-330 w-full justify-between ">
+    <div className="max-w-480  w-full lg:px-12 px-9 pt-10 xl:px-20 lg:pt-15 xl:pt-20 bg-black text-white flex flex-col items-center">
+      <div className="flex md:flex-row flex-col max-w-330 w-full justify-between items-center md:gap-0 gap-5 md:text-left text-center ">
         <div className=" flex flex-col justify-between">
           <div className="flex items-center ">
             <img
@@ -23,7 +23,7 @@ function Footer() {
             efficitur urna in dictum suscipit. Suspendisse maximus ipsum sem.
             c{" "}
           </p>
-          <div className="flex gap-3 mt-5">
+          <div className="flex gap-3 mt-5 md:justify-start justify-center">
             <a href="">
               <Instagram />
             </a>
@@ -35,41 +35,77 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex justify-center ">
-          <table className="flex flex-col text-[12px] font-normal">
-            <tr className="flex gap-14 py-3 w-18.5 text-[14px] font-semibold">
+        <div className="flex lg:flex-row md:flex-col justify-center ">
+          <table className="flex lg:flex-col flex-row  justify-center text-[12px] font-normal">
+            <tr className="flex md:flex-row flex-col mr-7 lg:gap-14 gap-8 py-3 text-[14px] font-semibold">
               <th>SERVICES</th>
               <th>EVENTS</th>
             </tr>
-            <tr className="flex gap-14 p-1 ">
-              <td>About</td>
-              <td>ullamcorper</td>
+            <tr className="lg:flex hidden gap-14 p-1 ">
+              <td>
+                <a href="">About</a>
+              </td>
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
             </tr>
-            <tr className="flex gap-14 p-1">
-              <td>News</td>
-              <td>ullamcorper</td>
+            <tr className="lg:flex hidden gap-14 p-1">
+              <td>
+                <a href="">News</a>
+              </td>
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
             </tr>
-            <tr className="flex gap-14 p-1">
-              <td>ullamcorper</td>
-              <td>ullamcorper</td>
+            <tr className="lg:flex hidden gap-14 p-1">
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
             </tr>
-            <tr className="flex gap-14 p-1">
-              <td>ullamcorper</td>
-              <td>ullamcorper</td>
+            <tr className="lg:flex hidden gap-14 p-1">
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
+              <td>
+                <a href="">ullamcorper</a>
+              </td>
             </tr>
           </table>
-          <div className="ml-14 flex flex-col gap-2 mt-3">
+          <div className="xl:ml-14 lg:ml-10 m-auto flex justify-center lg:items-start items-center flex-col gap-3 lg:gap-2 mt-3">
             <th className="text-[14px] font-bold flex-start flex">GALLERY</th>
-            <div className="grid grid-rows-2 grid-cols-3 grid-flow-col gap-5">
-              <img  className="w-22.5 h-15.5" src="public/assets/FooterImag1.jpg" alt="" />
-              <img className="w-22.5 h-15.5"  src="public/assets/FooterImage2.jpg" alt="" />
-              <img className="w-22.5 h-15.5"  src="public/assets/FooterImage3.jpg" alt="" />
-              <img  className="w-22.5 h-15.5" src="public/assets/FooterImage4.jpg" alt="" />
-              <img  className="w-22.5 h-15.5" src="public/assets/FooterImage5.jpg" alt="" />
+            <div className="grid lg:grid-rows-2 grid-rows grid-cols-2 lg:grid-cols-3 grid-flow-col gap-5">
+              <img
+                className="w-22.5 h-15.5 hidden lg:flex"
+                src="assets/FooterImag1.jpg"
+                alt=""
+              />
+              <img
+                className="w-22.5 h-15.5"
+                src="assets/FooterImage2.jpg"
+                alt=""
+              />
+              <img
+                className="w-22.5 h-15.5 hidden lg:flex"
+                src="assets/FooterImage3.jpg"
+                alt=""
+              />
+              <img
+                className="w-22.5 h-15.5 hidden lg:flex"
+                src="assets/FooterImage4.jpg"
+                alt=""
+              />
+              <img
+                className="w-22.5 h-15.5 hidden lg:flex"
+                src="assets/FooterImage5.jpg"
+                alt=""
+              />
               <div className="relative">
                 <img
-                  className="absolute top-0 h-15.5 w-22.5"
-                  src="public/assets/FooterImage6.png"
+                  className="absolute top-0 h-15.5 w-22.5 "
+                  src="assets/FooterImage6.png"
                   alt=""
                 />
                 <span className="absolute left-7 top-3 text-[12px] font-bold">
@@ -79,6 +115,11 @@ function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center w-full pt-15 pb-7  ">
+        <p className="text-[14px] font-normal text-center">
+          © Credits of companyName belong to companyName.
+        </p>
       </div>
     </div>
   );

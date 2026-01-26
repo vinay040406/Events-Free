@@ -36,7 +36,7 @@ const Hero = () => {
               bgColor="bg-[rgba(44,73,254,1)]"
               p="p-[12px_30px]"
               font="font-[600]"
-              rounded="rounded-[28px]"
+              rounded="rounded-[28px] hover:bg-[rgb(35,74,214)] hover:scale-105"
             />
             <a className="font-normal text-[20px] whitespace-nowrap ">
               Learn more
@@ -65,7 +65,7 @@ const Hero = () => {
               p="lg:p-[12px_40px] p-4"
               bgColor="bg-white"
               textColor="text-[#2C49FE]"
-              rounded="rounded-[150px]"
+              rounded="rounded-[150px] hover:scale-104 hover:shadow-lg"
               font="font-bold"
             />
           </footer>

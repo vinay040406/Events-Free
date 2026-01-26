@@ -6,7 +6,7 @@ import Button from "./Button";
 
 function Section4() {
   return (
-    <div className="xl:p-20 lg:p-15 md:p-10 max-w-480 w-full flex flex-col justify-center items-center xl:gap-20 gap-15">
+    <div className="xl:p-20 lg:p-15 md:p-10 p-8 max-w-480 w-full flex flex-col justify-center items-center xl:gap-20 gap-15">
       <div className="max-w-330 w-full flex xl:flex-row flex-col xl:justify-between justify-center items-center">
         <div className="flex flex-col xl:items- gap-3 xl:items-start items-center mb-10">
           <Line
@@ -29,7 +29,7 @@ function Section4() {
           <Section4Box
             title={"Lorem ipsum"}
             date={"09/23/2021"}
-            image={"public/assets/Section4Image1.jpg"}
+            image={"assets/Section4Image1.jpg"}
             text={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur urna in "
             }
@@ -37,7 +37,7 @@ function Section4() {
           <Section4Box
             title={"Lorem ipsum"}
             date={"01/24/2026"}
-            image={"public/assets/Section4Image2.jpg"}
+            image={"assets/Section4Image2.jpg"}
             text={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur urna in "
             }
@@ -47,7 +47,7 @@ function Section4() {
       <div className="max-w-330  flex  w-full lg:flex-row flex-col items-center xl:justify-between ">
         <img
           className="lg:p-8 p-5 md:mb-4 flex justify-center"
-          src="public/assets/Section4Image3.png"
+          src="assets/Section4Image3.png"
           alt=""
         />
         <div className="flex flex-col lg:items-start mt-8 justify-center items-center ">
@@ -99,7 +99,7 @@ function Section4() {
             <Button
               text="Sign up"
               textColor={
-                "max-w-143.5 text-white font-semibold text-[16px] rounded-[23px] py-2.5 w-full mt-5 bg-[#2C49FE] flex justify-center"
+                "max-w-143.5 hover:shadow-xl text-white font-semibold text-[16px] rounded-[23px] hover:scale-101 py-2.5 w-full mt-5 bg-[#2C49FE] flex justify-center"
               }
             />
           </form>

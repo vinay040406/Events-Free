@@ -1,11 +1,10 @@
 import React from "react";
 
-
-const Button = ({text,bgColor,textColor,rounded,p,font,onClick,}) => {
+const Button = ({ text, bgColor, textColor, rounded, p, font, onClick }) => {
   return (
     <button
-    onClick={onClick}
-      className={`whitespace-nowrap text-[20px] hover:scale-102 duration-200 ease-in-out  cursor-pointer ${font}  ${bgColor} ${textColor} ${rounded} ${p}`}
+      onClick={onClick}
+      className={`whitespace-nowrap text-[20px]  hover:font-bolder   duration-400 ease-in-out  cursor-pointer ${font}  ${bgColor} ${textColor} ${rounded} ${p}`}
     >
       {text}
     </button>

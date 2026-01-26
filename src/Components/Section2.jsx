@@ -27,7 +27,7 @@ function Section2() {
                 // allowfullscreen
               ></iframe>
             ) : (
-              <div className="absolute top-0 left-0 bg-white cursor-pointer">
+              <div className="xl:absolute relative flex justify-center top-0 left-0 bg-white cursor-pointer">
                 <img
                   className="image"
                   onClick={(handleCLick) => {

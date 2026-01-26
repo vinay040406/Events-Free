@@ -72,7 +72,7 @@ const Navbar = () => {
           bgColor="bg-[rgba(44,73,254,1)]"
           p="p-[10px_30px]"
           rounded="rounded-[23px]"
-          font="font-[600]"
+          font="font-[600] hover:scale-105 hover:bg-[rgb(35,74,214)]"
           onClick={handleLogout}
         />
       </ul>
