@@ -1,32 +1,29 @@
 import React from "react";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-import { icon } from "@fortawesome/fontawesome-svg-core";
 import { useState } from "react";
 import { gsap } from "gsap";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
   const [login, setLogout] = useState("Log In");
+  const [isOpen, setIsOpen] = useState(false);
+  const menu = document.querySelector(".menu");
+
 
   const [userLogin, setUserLogin] = useState(true);
-  let tl = gsap.timeline();
 
   function handleLogout() {
-    if (userLogin) {
-      setTimeout(() => {
-        setLogout("Log Out", false);
-        setUserLogin(false);
-      }, 1000);
-    } else if (!userLogin) {
-      setTimeout(() => {
-        setLogout("Log In", true);
-        setUserLogin(true);
-      }, 1000);
-    }
+    setTimeout(() => {
+      userLogin
+        ? setLogout("Log Out", setUserLogin(false))
+        : setLogout("Log In", setUserLogin(true));
+    }, 1000);
   }
+
+ 
 
   return (
     <nav
@@ -34,7 +31,6 @@ const Navbar = () => {
     >
       <div className={`md:hidden fixed sm:right-5 right-2 top-5 sm:top-8`}>
         <FontAwesomeIcon
-          onClick={() => setOpen(!open)}
           icon={faBars}
           className="cursor-pointer text-3xl font-bold"
         />
@@ -51,20 +47,19 @@ const Navbar = () => {
         </div>
       </div>
       <ul
-        className={`md:flex hidden gap-10  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 `}
+        className={`
+           md:flex hidden menu gap-10 menu  md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 
+         `}
       >
-        <a className="font-normal hover:font-bold  duration-200 " href="">
-          HOME
-        </a>
-        <a className="font-normal hover:font-bold duration-200 " href="">
-          EVENTS
-        </a>
-        <a className="font-normal hover:font-bold duration-200m " href="">
-          FEED
-        </a>
-        <a className="font-normal hover:font-bold duration-200  " href="">
-          USER NAME
-        </a>
+        {["HOME", "EVENTS", "FEED", "USER NAME"].map((item) => (
+          <a
+            key={item}
+            className="font-normal hover:font-bold  duration-200 "
+            href=""
+          >
+            {item}
+          </a>
+        ))}
 
         <Button
           text={login}

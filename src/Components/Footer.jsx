@@ -37,45 +37,47 @@ function Footer() {
         </div>
         <div className="flex lg:flex-row md:flex-col justify-center ">
           <table className="flex lg:flex-col flex-row  justify-center text-[12px] font-normal">
-            <tr className="flex md:flex-row flex-col mr-7 lg:gap-14 gap-8 py-3 text-[14px] font-semibold">
-              <th>SERVICES</th>
-              <th>EVENTS</th>
-            </tr>
-            <tr className="lg:flex hidden gap-14 p-1 ">
-              <td>
-                <a href="">About</a>
-              </td>
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-            </tr>
-            <tr className="lg:flex hidden gap-14 p-1">
-              <td>
-                <a href="">News</a>
-              </td>
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-            </tr>
-            <tr className="lg:flex hidden gap-14 p-1">
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-            </tr>
-            <tr className="lg:flex hidden gap-14 p-1">
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-              <td>
-                <a href="">ullamcorper</a>
-              </td>
-            </tr>
+            <tbody>
+              <tr className="flex md:flex-row flex-col mr-7 lg:gap-14 gap-8 py-3 text-[14px] font-semibold">
+                <th>SERVICES</th>
+                <th>EVENTS</th>
+              </tr>
+              <tr className="lg:flex hidden gap-14 p-1 ">
+                <td>
+                  <a href="">About</a>
+                </td>
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+              </tr>
+              <tr className="lg:flex hidden gap-14 p-1">
+                <td>
+                  <a href="">News</a>
+                </td>
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+              </tr>
+              <tr className="lg:flex hidden gap-14 p-1">
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+              </tr>
+              <tr className="lg:flex hidden gap-14 p-1">
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+                <td>
+                  <a href="">ullamcorper</a>
+                </td>
+              </tr>
+            </tbody>
           </table>
           <div className="xl:ml-14 lg:ml-10 m-auto flex justify-center lg:items-start items-center flex-col gap-3 lg:gap-2 mt-3">
-            <th className="text-[14px] font-bold flex-start flex">GALLERY</th>
+            <div className="text-[14px] font-bold flex-start flex">GALLERY</div>
             <div className="grid lg:grid-rows-2 grid-rows grid-cols-2 lg:grid-cols-3 grid-flow-col gap-5">
               <img
                 className="w-22.5 h-15.5 hidden lg:flex"

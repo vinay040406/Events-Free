@@ -5,6 +5,10 @@ import Button from "./Button";
 
 
 function Section4() {
+
+  const saveToLocal = () =>{
+    
+  }
   return (
     <div className="xl:p-20 lg:p-15 md:p-10 p-8 max-w-480 w-full flex flex-col justify-center items-center xl:gap-20 gap-15">
       <div className="max-w-330 w-full flex xl:flex-row flex-col xl:justify-between justify-center items-center">
@@ -64,29 +68,29 @@ function Section4() {
             </label>
             <br />
             <div className="flex w-full gap-4 mt-3">
-              <input
+              <input required
                 className="w-1/2 p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
                 type="text"
                 placeholder="First Name"
               />
-              <input
+              <input required
                 className="w-1/2 p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
                 type="text"
                 placeholder="Last Name"
               />
             </div>
-            <input
+            <input required
               className="w-full p-2 mt-3 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
               type="text"
               placeholder="Email Address"
             />
             <div className="flex w-full gap-4 mt-3">
-              <input
+              <input required
                 className="w-1/2 p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
                 type="text"
                 placeholder="Password"
               />
-              <input
+              <input required
                 className="w-1/2 p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
                 type="text"
                 placeholder="Confirm Password"
