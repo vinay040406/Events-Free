@@ -4,7 +4,7 @@ import { Awards, Participants, Speakers, Topics } from "../../Icons";
 
 function AwardsSection() {
   return (
-    <div className='bg-[url(assets/AwardsSectionBgImage.jpg)] bg-cover bg-center bg-no-repeat h-full w-full'>
+    <div className='bg-[url(/assets/AwardsSectionBgImage.jpg)] bg-cover bg-center bg-no-repeat h-full w-full'>
       <div className="max-w-480  h-full p-10 flex justify-center items-center border bg-[#2C49FECC] text-white text-center ">
         <div className="max-w-330 md:h-128.25 flex flex-col justify-evenly items-center">
           <h1 className="font-bold text-[48px] leading-12">
