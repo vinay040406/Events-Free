@@ -29,29 +29,30 @@ const Hero = () => {
         opacity: 1,
         duration: 1.5,
       },
-    );
-    tl.from("h1", {
-      x: 1200,
-      y: -1000,
-      z: 1400,
-      rotate: 360,
-      opacity: 0,
-      stagger: 1,
-      yoyo: true,
-      duration: 0.2,
-      delay: -1,
-    });
-    tl.from("p", {
-      x: 1200,
-      y: -1000,
-      z: 1400,
-      rotate: 360,
-      opacity: 0,
-      stagger: 1,
-      yoyo: true,
-      duration: 0.2,
-      delay: -4,
-    });
+    // );
+    // tl.from("h1", {
+    //   x: 1200,
+    //   y: -1000,
+    //   z: 1400,
+    //   rotate: 360,
+    //   opacity: 0,
+    //   stagger: 1,
+    //   yoyo: true,
+    //   duration: 0.2,
+    //   delay: -1,
+    // });
+    // tl.from("p", {
+    //   x: 1200,
+    //   y: -1000,
+    //   z: 1400,
+    //   rotate: 360,
+    //   opacity: 0,
+    //   stagger: 1,
+    //   yoyo: true,
+    //   duration: 0.2,
+    //   delay: -4,
+    // };
+    )
   }, []);
 
   return (
