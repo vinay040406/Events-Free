@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ typee, name, onChange, value, placeholder, Class }) {
+function Input({ typee, name, onChange, value, placeholder, Class,autoComplete }) {
   return (
     <>
       <input
@@ -10,6 +10,7 @@ function Input({ typee, name, onChange, value, placeholder, Class }) {
         onChange={onChange}
         name={name}
         className={`${Class}`}
+        autoComplete={autoComplete}
       />
     </>
   );

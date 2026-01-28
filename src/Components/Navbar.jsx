@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav
       className={`fixed max-w-330 z-100 w-full flex justify-between mt-0 md:mt-4 -ml-4  min-h-16.5 top-0 bg-black/30 backdrop-blur-sm rounded-lg duration-500 ease-in`}
     >
-      <div className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3 `}>
+      <div className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}>
         <button
           className={`text-[35px] font-bolder duration-900 ease-in-out`}
           onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ const Navbar = () => {
       <ul
         className={` menu
 
-          ${isOpen ? "block showMenu" : "md:flex hidden gap-10 md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 "}
+          ${isOpen ? "block showMenu " : "md:flex hidden gap-10 md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 "}
           
          `}
       >

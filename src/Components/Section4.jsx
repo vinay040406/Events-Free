@@ -3,7 +3,6 @@ import Line from "./Line";
 import Section4Box from "./Section4Box";
 import Button from "./Button";
 import Input from "./Input";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 function Section4() {
   const [user, setUser] = useState({
@@ -15,13 +14,11 @@ function Section4() {
   });
 
   const saveToLocal = () => {
-    localStorage.setItem("user details :",JSON.stringify(user));
+    localStorage.setItem("user_details", JSON.stringify(user));
   };
 
   const [errors, setErrors] = useState({});
-  const regex = /[@]/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // const mobileRegex = /^[0-9]{10}$/;
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%^&*])[A-Za-z\d@!#$%^&*]{8,}$/;
 
@@ -34,35 +31,44 @@ function Section4() {
     if (name === "firstname" && value.trim().length < 6) {
       newErrors.firstname =
         "username must be included @ and at least 6 characters";
-    } else if (name === "firstname" && !regex.test(value)) {
-      newErrors.firstname = "Please include @ character in the username";
-    } else {
-      delete newErrors.firstname;
-    }
+    } else delete newErrors.firstname;
+
     if (name === "email" && !emailRegex.test(value)) {
       newErrors.email = "Please enter valid mail id ";
-    } else {
-      delete newErrors.email;
-    }
+    } else delete newErrors.email;
 
     if (name === "password" && !passwordRegex.test(value)) {
       newErrors.password =
         "Password must contains 1 letter,1 special character,1 number and at least 8 characters long";
-    } else {
-      delete newErrors.password;
-    }
+    } else delete newErrors.password;
+
     if (name === "confirmPassword" && value !== user.password) {
       newErrors.confirmPassword = "Passwords do not match , Try again";
-    } else {
-      delete newErrors.confirmPassword;
-    }
+    } else delete newErrors.confirmPassword;
+
+    if (!user.firstname) newErrors.firstname = "please enter username";
+
+    if (!user.email) newErrors.email = "please enter email id";
+
+    if (!user.password) newErrors.password = "please enter password ";
+
+    if (!passwordRegex.test(user.password))
+      newErrors.password = "please enter password ";
 
     setErrors(newErrors);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
-    saveToLocal();
+
+    for (const el in user) {
+      if (user[el] == "") return;
+      else {
+        saveToLocal();
+      }
+    }
+    const data = JSON.parse(localStorage.getItem("user_details"));
+    console.log(data.email);
   };
   return (
     <div className="xl:p-20 lg:p-15 md:p-10 p-8 max-w-480 w-full flex flex-col justify-center items-center xl:gap-20 gap-15">
@@ -163,6 +169,7 @@ function Section4() {
               value={user.email}
               name={"email"}
               onChange={handleChange}
+              autoComplete={"email"}
               Class={
                 "w-full p-2 border-[rgba(0,0,0,0.4)] mt-3 outline-none border rounded-lg"
               }
@@ -177,6 +184,7 @@ function Section4() {
                   placeholder={"Password"}
                   value={user.password}
                   name={"password"}
+                  autoComplete={"password"}
                   onChange={handleChange}
                   Class={
                     "p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
@@ -192,6 +200,7 @@ function Section4() {
                   placeholder={"Confirm Password"}
                   value={user.confirmPassword}
                   name={"confirmPassword"}
+                  autoComplete={"confirmPassword"}
                   onChange={handleChange}
                   Class={
                     " p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
