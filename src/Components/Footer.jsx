@@ -76,7 +76,7 @@ function Footer() {
               </tr>
             </tbody>
           </table>
-          <div className="xl:ml-14 lg:ml-10 m-auto flex justify-center lg:items-start items-center flex-col gap-3 lg:gap-2 mt-3">
+          <div className="xl:ml-14 lg:ml-10 m-auto flex justify-center md:items-start items-center flex-col gap-3 lg:gap-2 lg:mt-9 mt-4 ">
             <div className="text-[14px] font-bold flex-start flex">GALLERY</div>
             <div className="grid lg:grid-rows-2 grid-rows grid-cols-2 lg:grid-cols-3 grid-flow-col gap-5">
               <img

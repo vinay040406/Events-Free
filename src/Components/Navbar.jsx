@@ -6,10 +6,18 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
+// import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [login, setLogout] = useState("Log In");
   const [isOpen, setIsOpen] = useState(false);
+
+  // const navigate = useNavigate();
+
+  // function handleLogin () {
+  //   navigate("https://www.google.com");
+  // };
+
 
   const [userLogin, setUserLogin] = useState(true);
 
