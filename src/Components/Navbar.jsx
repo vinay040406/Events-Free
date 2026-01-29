@@ -1,23 +1,11 @@
-import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-import { useState, useEffect } from "react";
-import { gsap } from "gsap";
-// import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
   const [login, setLogout] = useState("Log In");
   const [isOpen, setIsOpen] = useState(false);
-
-  // const navigate = useNavigate();
-
-  // function handleLogin () {
-  //   navigate("https://www.google.com");
-  // };
-
 
   const [userLogin, setUserLogin] = useState(true);
 
@@ -31,9 +19,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed max-w-330 z-100 w-full flex justify-between mt-0 md:mt-4 -ml-4  min-h-16.5 top-0 bg-black/30 backdrop-blur-sm rounded-lg duration-500 ease-in`}
+      className={`fixed max-w-440 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 bg-black/30 backdrop-blur-sm rounded-lg duration-500 ease-in`}
     >
-      <div className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}>
+      <div
+        className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}
+      >
         <button
           className={`text-[35px] font-bolder duration-900 ease-in-out`}
           onClick={() => setIsOpen(!isOpen)}
@@ -60,13 +50,19 @@ const Navbar = () => {
          `}
       >
         {["HOME", "EVENTS", "FEED", "USER NAME"].map((item) => (
-          <a
+          <Link
+            to={
+              (item === "HOME" && "/") ||
+              (item === "EVENTS" && "/events") ||
+              (item === "FEED" && "/feed") ||
+              (item === "USER NAME" && "/username")
+            }
             key={item}
             className="font-normal hover:font-bold  duration-200 "
             href=""
           >
             {item}
-          </a>
+          </Link>
         ))}
 
         <Button

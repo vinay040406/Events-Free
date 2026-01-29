@@ -22,11 +22,11 @@ function Section4() {
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%^&*])[A-Za-z\d@!#$%^&*]{8,}$/;
 
+  let newErrors = { ...errors };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
-
-    let newErrors = { ...errors };
 
     if (name === "firstname" && value.trim().length < 6) {
       newErrors.firstname =
@@ -67,6 +67,13 @@ function Section4() {
         saveToLocal();
       }
     }
+    setUser({
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
     const data = JSON.parse(localStorage.getItem("user_details"));
     console.log(data.email);
   };
@@ -127,7 +134,7 @@ function Section4() {
             onSubmit={handleSubmit}
             className="max-w-143.5 w-full lg:text-left text-center mt-2.5 text-[16px] font-normal lg:px-0 px-4"
           >
-            <label className="text-[35px] font-bold " htmlFor="">
+            <label id="Sign Up" className="text-[35px] font-bold ">
               Sign Up
             </label>
             <br />
@@ -154,6 +161,7 @@ function Section4() {
                   value={user.lastname}
                   name={"lastname"}
                   onChange={handleChange}
+                  autoComplete={"true"}
                   Class={
                     " p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
                   }
@@ -184,7 +192,7 @@ function Section4() {
                   placeholder={"Password"}
                   value={user.password}
                   name={"password"}
-                  autoComplete={"password"}
+                  autoComplete={"true"}
                   onChange={handleChange}
                   Class={
                     "p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
@@ -200,7 +208,7 @@ function Section4() {
                   placeholder={"Confirm Password"}
                   value={user.confirmPassword}
                   name={"confirmPassword"}
-                  autoComplete={"confirmPassword"}
+                  autoComplete={"true"}
                   onChange={handleChange}
                   Class={
                     " p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
@@ -214,6 +222,8 @@ function Section4() {
               </div>
             </div>
             <textarea
+              name="textarea"
+              autoComplete={"true"}
               className="w-full min-h-31 mt-3 p-2 border-[rgba(0,0,0,0.4)] outline-none border rounded-lg"
               placeholder="About Me"
             ></textarea>
