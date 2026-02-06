@@ -77,7 +77,6 @@ function Section4() {
       confirmPassword: "",
     });
     const data = JSON.parse(localStorage.getItem("user_details"));
-    // console.log(data.email);
   };
   const handleBtnClick = (e) => {
     if (handleChange(e)) {

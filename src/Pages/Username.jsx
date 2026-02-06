@@ -127,7 +127,7 @@ function Username() {
           </div>
           <img
             className="max-w-154.7 h-103.75 rounded-[23px] object-cover"
-            src="public/assets/usernameImages/2ndImage.jpg"
+            src="assets/usernameImages/2ndImage.jpg"
             alt=""
           />
         </div>
@@ -149,7 +149,7 @@ function Username() {
             alt=""
           />
           <img
-            className="w-full h-50 object-cover lg:row-span-2 rounded-[30px] "
+            className="w-full lg:h-full h-50 object-cover lg:row-span-2 rounded-[30px] "
             src="/assets/EventsFreeBoxImage.jpg"
             alt=""
           />

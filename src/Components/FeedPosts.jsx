@@ -9,8 +9,6 @@ const FeedPosts = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [fals, setfals] = useState(false);
-  let total = comment + comments;
-  console.log(total, comment, comments);
 
   const handlePost = () => {
     if (comment.trim() === "") return;
@@ -76,7 +74,7 @@ const FeedPosts = () => {
               </div>
               <div className="flex gap-2 items-center">
                 <Comment onClick={() => hanldleCommentClick()} />
-                <span className="text-[16px]">{comments.length+4}</span>
+                <span className="text-[16px]">{comments.length + 4}</span>
               </div>
             </div>
           </div>
@@ -133,7 +131,7 @@ const FeedPosts = () => {
               onClick={handlePost}
             />
           </div>
-          <UsernameDummyImages  />
+          <UsernameDummyImages />
           {comments.map((item, index) => (
             <div
               key={index}
