@@ -3,72 +3,18 @@ import Navbar from "./Navbar";
 import Button from "./Button";
 import Location from "./Location";
 import Line from "./Line";
-import { gsap } from "gsap";
 
 const Hero = () => {
-  let tl = gsap.timeline();
-
-  const bgRef = useRef(null);
-  const headingRef = useRef(null);
-  useEffect(() => {
-    tl.fromTo(
-      bgRef.current,
-      {
-        x: 1200,
-        y: -1000,
-        z: 1400,
-        opacity: 0,
-        rotate: 0,
-      },
-      {
-        x: 0,
-        rotate: 540,
-        yoyo: true,
-        y: 0,
-        z: 0,
-        opacity: 1,
-        duration: 1.5,
-      },
-    // );
-    // tl.from("h1", {
-    //   x: 1200,
-    //   y: -1000,
-    //   z: 1400,
-    //   rotate: 360,
-    //   opacity: 0,
-    //   stagger: 1,
-    //   yoyo: true,
-    //   duration: 0.2,
-    //   delay: -1,
-    // });
-    // tl.from("p", {
-    //   x: 1200,
-    //   y: -1000,
-    //   z: 1400,
-    //   rotate: 360,
-    //   opacity: 0,
-    //   stagger: 1,
-    //   yoyo: true,
-    //   duration: 0.2,
-    //   delay: -4,
-    // };
-    )
-  }, []);
-
   return (
     <div className="relative max-w-480 w-full min-h-246.5 overflow-hidden  ">
       <div
-        ref={bgRef}
         className=" bg-[linear-gradient(to_right,rgba(0,0,0,0.7),transparent),url(/assets/BackgroundImage.jpg)] bg-no-repeat bg-cover min-h-full 
       bg-center  absolute scale-x-[-1] w-screen inset-0"
       ></div>
       <div className=" text-white md:flex-col flex relative  items-center px-5">
         <Navbar />
         <div className="hero mt-40 md:mt-62.5 max-w-330 w-full flex flex-col md:items-start items-center">
-          <div
-            ref={headingRef}
-            className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]"
-          >
+          <div className="heading  text-[45px] text-center md:text-left  md:text-[50px] lg:text-[64px] font-bold text-white leading-[1.4]">
             <h1>Sed tortor in quisque morbi </h1>
             <Line
               display={" sm:justify-end justify-center"}
@@ -76,7 +22,7 @@ const Hero = () => {
             />
             <h1>scelerisque etiam eu.</h1>
           </div>
-          <p className="max-w-191.25 w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex ">
+          <p style={{opacity:100}} className="max-w-191.25  w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             efficitur urna in dictum suscipit. Suspendisse maximus ipsum sem.
             Donec ut justo et leo congue lacinia vitae nec arcu. Nunc elit elit,
@@ -98,7 +44,7 @@ const Hero = () => {
           </div>
           <footer className="md:flex grid lg:gap-8  md:gap-6 gap-8 grid-flow-row grid-cols-1  md:max-w-240.5 md:w-full justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] sm:p-[40px_80px] md:px-8 md:py-5 px-10 py-5 mb-5 items-center md:mt-35 sm:mt-30 mt-25 ">
             <div>
-              <Location
+              <Location 
                 title="Location"
                 info="Search by city"
                 icon="assets/location.png"

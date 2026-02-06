@@ -50,7 +50,9 @@ function Section4() {
 
     if (!user.email) newErrors.email = "please enter email id";
 
-    if (!user.password) newErrors.password = "please enter password ";
+    if (!user.password) {
+      newErrors.password = "please enter password ";
+    }
 
     if (!passwordRegex.test(user.password))
       newErrors.password = "please enter password ";
@@ -75,7 +77,12 @@ function Section4() {
       confirmPassword: "",
     });
     const data = JSON.parse(localStorage.getItem("user_details"));
-    console.log(data.email);
+    // console.log(data.email);
+  };
+  const handleBtnClick = (e) => {
+    if (handleChange(e)) {
+      setUser("")
+    }
   };
   return (
     <div className="xl:p-20 lg:p-15 md:p-10 p-8 max-w-480 w-full flex flex-col justify-center items-center xl:gap-20 gap-15">
@@ -99,6 +106,13 @@ function Section4() {
         </div>
         <div className="flex lg:flex-row flex-col gap-10 justify-start">
           <Section4Box
+            divStyle={
+              "flex px-2 py-3 flex-col justify-between  max-w-84.75 hover:shadow-[2px_9px_32px_0px_rgba(0,0,0,0.06)] hover:cursor-pointer duration-300  ease-in-out rounded-md"
+            }
+            imgStyle={"xl:w-78.25 object-cover h-43.25 "}
+            spanStyle={"text-[14px] font-normal ml-3 mt-3"}
+            pStyle={"text-[16px] font-normal w-[80%] ml-3"}
+            h3Style={"text-[24px] font-medium ml-3"}
             title={"Lorem ipsum"}
             date={"09/23/2021"}
             image={"assets/Section4Image1.jpg"}
@@ -107,6 +121,13 @@ function Section4() {
             }
           />
           <Section4Box
+            divStyle={
+              "flex px-2 py-3 flex-col justify-between  max-w-84.75 hover:shadow-[2px_9px_32px_0px_rgba(0,0,0,0.06)] hover:cursor-pointer duration-300  ease-in-out rounded-md"
+            }
+            imgStyle={"xl:w-78.25 object-cover h-43.25 "}
+            spanStyle={"text-[14px] font-normal ml-3 mt-3"}
+            pStyle={"text-[16px] font-normal w-[80%] ml-3"}
+            h3Style={"text-[24px] font-medium ml-3"}
             title={"Lorem ipsum"}
             date={"01/24/2026"}
             image={"assets/Section4Image2.jpg"}
@@ -228,6 +249,7 @@ function Section4() {
               placeholder="About Me"
             ></textarea>
             <Button
+              onClick={handleBtnClick}
               text="Sign up"
               textColor={
                 "max-w-143.5 hover:shadow-xl text-white font-semibold text-[16px] rounded-[23px] hover:scale-101 py-2.5 w-full mt-5 bg-[#2C49FE] flex justify-center"

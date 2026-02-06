@@ -3,7 +3,7 @@ import Button from "./Button";
 import "./Navbar.css";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ shadow }) => {
   const [login, setLogout] = useState("Log In");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed max-w-440 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 bg-black/30 backdrop-blur-sm rounded-lg duration-500 ease-in`}
+      className={`${shadow} fixed max-w-440 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 rounded-lg duration-500 ease-in`}
     >
       <div
         className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}
@@ -43,9 +43,9 @@ const Navbar = () => {
         </div>
       </div>
       <ul
-        className={` menu
+        className={` duration-900 ease-in-out gap-10 md:flex md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] flex md:px-4 lg:p-2 p-4 
 
-          ${isOpen ? "block showMenu " : "md:flex hidden gap-10 md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] md:px-4 lg:p-2 p-4 "}
+          ${isOpen ? "block showMenu text-white translate-x-0 " : "hidden"}
           
          `}
       >
@@ -69,7 +69,7 @@ const Navbar = () => {
           text={login}
           textColor="text-white"
           bgColor="bg-[rgba(44,73,254,1)]"
-          p="p-[10px_30px]"
+          p="p-[12px_30px]"
           rounded="rounded-[23px]"
           font="font-[600] hover:scale-105 hover:bg-[rgb(35,74,214)]"
           onClick={handleLogout}
