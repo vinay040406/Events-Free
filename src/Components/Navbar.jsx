@@ -19,7 +19,7 @@ const Navbar = ({ shadow }) => {
 
   return (
     <nav
-      className={`${shadow} fixed max-w-440 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 rounded-lg duration-500 ease-in`}
+      className={`${shadow} fixed max-w-440 lg:p-4 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 rounded-lg duration-500 ease-in`}
     >
       <div
         className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}
@@ -32,11 +32,13 @@ const Navbar = ({ shadow }) => {
         </button>
       </div>
       <div className="flex items-center">
-        <img
-          src="assets/logo.png"
-          alt=""
-          className="sm:h-auto lg:w-24.5 lg:h-20 h-15 w-20 cursor-pointer"
-        />
+        <div className="h-16.5 w-24.5 flex justify-center items-center">
+          <img
+            src="assets/logo.png"
+            alt=""
+            className="sm:h-auto lg:w-24.5 lg:h-20 h-15 w-20 cursor-pointer object-center object-cover"
+          />
+        </div>
         <div className="sm:text-[36px] text-[27px] font-bold flex items-center leading-0  lg:ml-1.25 cursor-pointer">
           <p className="text-[rgba(44,73,254,1)]">Events</p>
           <span className="text-[rgba(1,200,255,1)]">Free</span>
