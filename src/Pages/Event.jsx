@@ -19,7 +19,7 @@ function Event() {
   ];
   return (
     <div className="w-full text-white text-4xl flex flex-col justify-center items-center ">
-      <Navbar />
+      <Navbar shadow={" bg-black/30 backdrop-blur-sm"} />
       <div className='max-w-440 w-full h-93 py-10 lg:text-left text-center  justify-center flex items-end bg-[linear-gradient(to_right,rgba(0,0,0,0.3)),url("/assets/EventsBgImage.jpg")]  bg-no-repeat bg-center bg-cover'>
         <div className="flex flex-col max-w-330 w-full  ">
           <div className="flex text-[16px] lg:justify-start justify-center  gap-2 font-normal ">

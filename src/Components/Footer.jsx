@@ -104,13 +104,13 @@ function Footer() {
                 src="assets/FooterImage5.jpg"
                 alt=""
               />
-              <div className="relative">
+              <div className="relative flex justify-center items-center">
                 <img
                   className="absolute top-0 h-15.5 w-22.5 "
                   src="assets/FooterImage6.png"
                   alt=""
                 />
-                <span className="absolute left-7 top-3 text-[12px] font-bold">
+                <span className="text-[12px] font-bold">
                   Show <br /> More
                 </span>
               </div>

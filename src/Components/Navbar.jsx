@@ -31,19 +31,24 @@ const Navbar = ({ shadow }) => {
           {isOpen ? "✕" : "☰"}
         </button>
       </div>
-      <div className="flex items-center">
-        <div className="h-16.5 w-24.5 flex justify-center items-center">
-          <img
-            src="assets/logo.png"
-            alt=""
-            className="sm:h-auto lg:w-24.5 lg:h-20 h-15 w-20 cursor-pointer object-center object-cover"
-          />
+
+      <Link to="/">
+        <div className="flex items-center">
+          <div className="h-16.5 w-24.5 flex justify-center items-center">
+            <img
+              src="assets/logo.png"
+              alt=""
+              className="sm:h-auto lg:w-24.5 lg:h-20 h-15 w-20 cursor-pointer object-center object-cover"
+            />
+          </div>
+
+          <div className="sm:text-[36px] text-[27px] font-bold flex items-center leading-0  lg:ml-1.25 cursor-pointer">
+            <p className="text-[rgba(44,73,254,1)]">Events</p>
+            <span className="text-[rgba(1,200,255,1)]">Free</span>
+          </div>
         </div>
-        <div className="sm:text-[36px] text-[27px] font-bold flex items-center leading-0  lg:ml-1.25 cursor-pointer">
-          <p className="text-[rgba(44,73,254,1)]">Events</p>
-          <span className="text-[rgba(1,200,255,1)]">Free</span>
-        </div>
-      </div>
+      </Link>
+
       <ul
         className={` duration-900 ease-in-out gap-10 md:flex md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] flex md:px-4 lg:p-2 p-4 
 

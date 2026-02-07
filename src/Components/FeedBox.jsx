@@ -2,8 +2,8 @@ import React from "react";
 
 const FeedBox = ({ src }) => {
   return (
-    <div className="flex lg:flex-row flex-col w-1/3 justify-center cursor-pointer transition-all ease-in-out duration-300 items-center gap-3  rounded-[20px] p-3 hover:shadow-[0px_8px_35px_0px_rgba(0,0,0,0.09)] ">
-      <div className="h-28 w-28.5 w-full">
+    <div className="flex lg:flex-row flex-col w-2/5 justify-center cursor-pointer transition-all ease-in-out duration-300 items-center gap-3  rounded-[20px] p-3 hover:shadow-[0px_8px_35px_0px_rgba(0,0,0,0.09)] ">
+      <div className="h-28 w-full">
         <img
           src={src}
           alt=""

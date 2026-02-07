@@ -97,11 +97,18 @@ const FeedPosts = () => {
                 src="/assets/FeedImage2.jpg"
                 alt=""
               />
-              <img
-                className="h-59 w-75.75 rounded-[20px]"
-                src="/assets/usernameImages/1st image.jpg"
-                alt=""
-              />
+              <div className="h-59 w-75.75 relative">
+                <img
+                  className=" h-full w-full rounded-[20px]"
+                  src="/assets/usernameImages/1st image.jpg"
+                  alt=""
+                />
+                <div className="absolute bottom-2 right-2 flex-col bg-white rounded-xl h-20 w-20 flex justify-center items-center">
+                  <span className="text-[36px] font-semibold opacity-60">+15</span>
+                  <span className="text-[16px] font-normal opacity-60">more</span>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
