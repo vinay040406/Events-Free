@@ -22,13 +22,21 @@ const Navbar = ({ shadow }) => {
       className={`${shadow} fixed max-w-440 lg:p-4 z-100 w-full flex lg:justify-around md:justify-between lg:gap-20  min-h-16.5 left-0 top-0 rounded-lg duration-500 ease-in`}
     >
       <div
-        className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out`}
+        className={`md:hidden fixed sm:right-5 right-2 top-1 sm:top-3  duration-900 ease-in-out z-100`}
       >
         <button
-          className={`text-[35px] font-bolder duration-900 ease-in-out`}
           onClick={() => setIsOpen(!isOpen)}
+          className="fixed top-3 right-6 cursor-pointer flex flex-col mt-5 gap-1 min-[1000px]:hidden z-1001"
         >
-          {isOpen ? "✕" : "☰"}
+          <span
+            className={`w-7 h-0.75 bg-[#2C49FECC] transition ${isOpen && "rotate-45 translate-y-1 ]"}`}
+          />
+          <span
+            className={`w-7 h-0.75 bg-[#2C49FECC] transition ${isOpen && "hidden"}`}
+          />
+          <span
+            className={`w-7 h-0.75 bg-[#2C49FECC] transition ${isOpen && "-rotate-45 -translate-y-1"}`}
+          />
         </button>
       </div>
 
@@ -52,8 +60,7 @@ const Navbar = ({ shadow }) => {
       <ul
         className={` duration-900 ease-in-out gap-10 md:flex md:flex-row md:justify-between items-center lg:gap-12.5 md:gap-4 text-[16px] flex md:px-4 lg:p-2 p-4 
 
-          ${isOpen ? "block showMenu text-white translate-x-0 " : "hidden"}
-          
+          ${isOpen ? "opacity-100 translate-x-0  flex-col h-[70vh] w-[50vw] rounded-tl-2xl  rounded-bl-2xl fixed right-0 top-15 bg-[#4526f7] text-[#ffffff] justify-center items-center" : "hidden"}
          `}
       >
         {["HOME", "EVENTS", "FEED", "USER NAME"].map((item) => (
@@ -65,7 +72,7 @@ const Navbar = ({ shadow }) => {
               (item === "USER NAME" && "/username")
             }
             key={item}
-            className="font-normal hover:font-bold  duration-200 "
+            className={`font-normal hover:font-bold  duration-200 ${isOpen ? "text-[36px]" : ""} `}
             href=""
           >
             {item}
