@@ -1,8 +1,8 @@
 import React from "react";
-import Line from "./Line";
+import Line from "../Common/Line";
 import { useState, useRef } from "react";
 import Section2Box from "./Section2Box";
-import { Help, Info, Sharing } from "../../Icons";
+import { Help, Info, Sharing } from "../../../Icons";
 
 function Section2() {
   const [play, setPlay] = useState(false);

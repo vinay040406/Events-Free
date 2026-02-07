@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Trash } from "../../Icons";
+import { Trash } from "../../../Icons";
 
 const UsernameDummyImages = () => {
   const [comments,setComments] = useState([

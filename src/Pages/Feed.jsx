@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Navbar from "../Components/Common/Navbar";
+import Footer from "../Components/Common/Footer";
 import { Link } from "react-router-dom";
-import FeedBox from "../Components/FeedBox";
-import Line from "../Components/Line";
-import FeedPosts from "../Components/FeedPosts";
+import FeedBox from "../Components/Feed/FeedBox";
+import Line from "../Components//Common/Line";
+import FeedPosts from "../Components/Feed/FeedPosts";
 
 function Feed() {
   const username = ["one", "two", "three", "four", "five", "six"];

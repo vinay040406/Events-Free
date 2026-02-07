@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Navbar from "../Components/Common/Navbar";
+import Footer from "../Components/Common/Footer";
 import { Link } from "react-router-dom";
-import Button from "../Components/Button";
+import Button from "../Components/Common/Button";
 import {
   Date,
   Members,
@@ -12,8 +12,8 @@ import {
   Commas,
   Trash,
 } from "../../Icons";
-import Line from "../Components/Line";
-import UsernameDummyImages from "../Components/UsernameDummyImages";
+import Line from "../Components/Common/Line";
+import UsernameDummyImages from "../Components/Username/UsernameDummyImages";
 
 function Username() {
   const [comment, setComment] = useState("");

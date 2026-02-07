@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Common/Button";
 import { text } from "@fortawesome/fontawesome-svg-core";
-import { Date, Location, Members } from "../../Icons";
+import { Date, Location, Members } from "../../../Icons";
 
 function EventsFreeBox({ src, title }) {
   return (

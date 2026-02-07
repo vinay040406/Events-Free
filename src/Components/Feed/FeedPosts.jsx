@@ -1,9 +1,9 @@
 import React from "react";
-import { Comment, Date, Like, Trash } from "../../Icons";
+import { Comment, Date, Like, Trash } from "../../../Icons";
 import { CiHeart } from "react-icons/ci";
 import { useState } from "react";
-import Button from "./Button";
-import UsernameDummyImages from "./UsernameDummyImages";
+import Button from "../Common/Button";
+import UsernameDummyImages from "../Username/UsernameDummyImages";
 
 const FeedPosts = () => {
   const [comment, setComment] = useState("");

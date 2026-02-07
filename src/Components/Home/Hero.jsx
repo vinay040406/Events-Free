@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import Navbar from "./Navbar";
-import Button from "./Button";
-import Location from "./Location";
-import Line from "./Line";
+import Navbar from "../Common/Navbar";
+import Button from "../Common/Button";
+import Location from "../Username/Location";
+import Line from "../Common/Line";
 
 const Hero = () => {
   return (
@@ -22,7 +22,10 @@ const Hero = () => {
             />
             <h1>scelerisque etiam eu.</h1>
           </div>
-          <p style={{opacity:100}} className="max-w-191.25  w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex ">
+          <p
+            style={{ opacity: 100 }}
+            className="max-w-191.25  w-full text-[16px] sm:text-[20px] font-normal  m-[30px_0px] flex "
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             efficitur urna in dictum suscipit. Suspendisse maximus ipsum sem.
             Donec ut justo et leo congue lacinia vitae nec arcu. Nunc elit elit,
@@ -44,7 +47,7 @@ const Hero = () => {
           </div>
           <footer className="md:flex grid lg:gap-8  md:gap-6 gap-8 grid-flow-row grid-cols-1  md:max-w-240.5 md:w-full justify-between  bg-[rgba(44,73,254,0.74)] rounded-4xl md:rounded-[150px] sm:p-[40px_80px] md:px-8 md:py-5 px-10 py-5 mb-5 items-center md:mt-35 sm:mt-30 mt-25 ">
             <div>
-              <Location 
+              <Location
                 title="Location"
                 info="Search by city"
                 icon="assets/location.png"

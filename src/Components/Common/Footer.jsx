@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } from "../../Icons";
+import { Facebook, Instagram, Twitter } from "../../../Icons";
 import "./Footer.css";
 
 function Footer() {

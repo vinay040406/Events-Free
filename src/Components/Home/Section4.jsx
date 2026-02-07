@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Line from "./Line";
+import Line from "../Common/Line";
 import Section4Box from "./Section4Box";
-import Button from "./Button";
-import Input from "./Input";
+import Button from "../Common/Button";
+import Input from "../Common/Input";
 
 function Section4() {
   const [user, setUser] = useState({
@@ -80,7 +80,7 @@ function Section4() {
   };
   const handleBtnClick = (e) => {
     if (handleChange(e)) {
-      setUser("")
+      setUser("");
     }
   };
   return (
