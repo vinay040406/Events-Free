@@ -4,11 +4,14 @@ import { CiHeart } from "react-icons/ci";
 import { useState } from "react";
 import Button from "../Common/Button";
 import UsernameDummyImages from "../Username/UsernameDummyImages";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const FeedPosts = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [fals, setfals] = useState(false);
+  const [isLiked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(10);
 
   const handlePost = () => {
     if (comment.trim() === "") return;
@@ -18,8 +21,11 @@ const FeedPosts = () => {
   const hanldleCommentClick = () => {
     setfals(!fals);
   };
+  const handleLike = () => {
+    setLikes((prev) => (isLiked ? prev - 1 : prev + 1));
+    setLiked(!isLiked);
+  };
 
-  const [like, setLike] = useState(10);
   const handleTrashBtn = (val) => {
     setComments(comments.filter((comm) => comm !== val));
   };
@@ -67,10 +73,10 @@ const FeedPosts = () => {
             <div className="flex gap-10">
               <div className="flex gap-2 items-center">
                 <CiHeart
-                  className="cursor-pointer"
-                  onClick={() => setLike(like + 1)}
+                  className={`cursor-pointer ${isLiked ? "text-red-500" : "text-black"} `}
+                  onClick={handleLike}
                 />
-                <span className="text-[16px]">{like}</span>
+                <span className="text-[16px]">{likes}</span>
               </div>
               <div className="flex gap-2 items-center">
                 <Comment onClick={() => hanldleCommentClick()} />
@@ -104,9 +110,12 @@ const FeedPosts = () => {
                   alt=""
                 />
                 <div className="absolute bottom-2 right-2 flex-col bg-white rounded-xl h-20 w-20 flex justify-center items-center">
-                  <span className="text-[36px] font-semibold opacity-60">+15</span>
-                  <span className="text-[16px] font-normal opacity-60">more</span>
-
+                  <span className="text-[36px] font-semibold opacity-60">
+                    +15
+                  </span>
+                  <span className="text-[16px] font-normal opacity-60">
+                    more
+                  </span>
                 </div>
               </div>
             </div>
@@ -138,11 +147,10 @@ const FeedPosts = () => {
               onClick={handlePost}
             />
           </div>
-          <UsernameDummyImages />
           {comments.map((item, index) => (
             <div
               key={index}
-              className="px-2 py-3 rounded flex w-330 justify-between items-start"
+              className="px-2 py-3 w-full rounded flex flex-wrap  justify-between items-start"
             >
               <img
                 src={`https://picsum.photos/seed/${index + 5}/100/100`}
@@ -154,7 +162,7 @@ const FeedPosts = () => {
                 <div className="flex flex-col items-start gap-2 bg-gray-100 px-5 py-3 rounded-r-[20px] rounded-bl-[20px]">
                   <h3 className="text-[16px] font-medium">Username</h3>
 
-                  <p className="text-[16px] font-normal opacity-60 text-left">
+                  <p className="text-[16px] break-all w-full font-normal opacity-60 text-left">
                     {item}
                   </p>
                 </div>
@@ -171,6 +179,7 @@ const FeedPosts = () => {
               </div>
             </div>
           ))}
+          <UsernameDummyImages />
         </div>
       </div>
     </div>

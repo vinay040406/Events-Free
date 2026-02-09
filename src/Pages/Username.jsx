@@ -208,8 +208,6 @@ function Username() {
           </div>
           <div className="flex w-full items-center gap-2 flex-col mt-4">
             <div className="w-full flex flex-col md:gap-4 gap-2 pb-20">
-              <UsernameDummyImages index={1} />
-
               {comments.map((item, index) => (
                 <div
                   key={index}
@@ -225,7 +223,7 @@ function Username() {
                     <div className="flex flex-col items-start gap-2 bg-gray-100 px-5 py-3 rounded-r-[20px] rounded-bl-[20px]">
                       <h3 className="text-[16px] font-medium">Username</h3>
 
-                      <p className="text-[16px] font-normal opacity-60 text-left">
+                      <p className="text-[16px] font-normal break-all opacity-60 text-left">
                         {item}
                       </p>
                     </div>
@@ -242,6 +240,7 @@ function Username() {
                   </div>
                 </div>
               ))}
+              <UsernameDummyImages index={1} />
             </div>
           </div>
         </div>
